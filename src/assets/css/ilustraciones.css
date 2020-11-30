@@ -1,0 +1,106 @@
+.main {
+    background: #3ACFE3;
+    color: white;
+}
+
+.main .box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.app-domy {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.phone-domy{
+    width: 30vw;
+    max-height: 110vh;
+    margin-top: -30vh;
+}
+
+.moto-domy {
+   position: absolute;
+   display: none;
+}
+
+.camion-domy {
+    position: absolute;
+    display: none;
+}
+
+.descripcion {
+    margin: 5vh 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.descripcion h2{
+  color: #002A8B;
+  font-weight: bold;
+  font-size: calc(0.6em + 2vw);
+  line-height: 1;
+  padding-bottom: 0.4em;
+}
+
+.descripcion p {
+    font-size: calc(0.4em + 1vw);
+    line-height: 1;
+    text-align: justify;
+}
+
+.descripcion span {
+    display: inline-block;
+    font-size: calc(0.4em + 1vw);
+    margin-top: 10px;
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    .descripcion {
+        margin: 0;
+    }
+
+    .app-domy {
+        justify-content: center;
+    }
+
+}
+
+@media screen
+and (min-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+
+    .main .box {
+        flex-direction: row;
+        position: relative;
+    }
+
+    .descripcion {
+        width: 30%;
+    }
+
+    .camion-domy {
+        width: 50vw;
+        right: -19vw;
+        top: -50px;
+        display: block;
+        z-index: 2;
+    }
+
+    .moto-domy {
+       display: none;
+    }
+
+    .descripcion h2{
+        text-align: left;
+    }
+
+}
+
+
