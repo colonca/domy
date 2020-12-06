@@ -16,7 +16,7 @@
 }
 
 .phone-domy{
-    width: 30vw;
+    width: 40vw;
     max-height: 110vh;
     margin-top: -30vh;
 }
@@ -39,20 +39,20 @@
 .descripcion h2{
   color: #002A8B;
   font-weight: bold;
-  font-size: calc(0.6em + 2vw);
+  font-size: calc(1.2em + 2vw);
   line-height: 1;
   padding-bottom: 0.4em;
 }
 
 .descripcion p {
-    font-size: calc(0.4em + 1vw);
+    font-size: calc(1em + 1vw);
     line-height: 1;
     text-align: justify;
 }
 
 .descripcion span {
     display: inline-block;
-    font-size: calc(0.4em + 1vw);
+    font-size: calc(1em + 1vw);
     margin-top: 10px;
 }
 
@@ -60,6 +60,22 @@
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (-webkit-min-device-pixel-ratio: 1) {
+
+    .phone-domy{
+        width: 30vw;
+    }
+
+    .descripcion h2{
+        font-size: calc(0.8em + 2vw);
+    }
+
+    .descripcion p {
+        font-size: calc(0.6em + 1vw);
+    }
+
+    .descripcion span {
+        font-size: calc(0.6em + 1vw);
+    }
 
     .descripcion {
         margin: 0;
@@ -75,6 +91,21 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 1) {
 
+    .phone-domy{
+        width: 30vw;
+    }
+
+    .descripcion h2{
+        font-size: calc(0.6em + 2vw);
+    }
+
+    .descripcion p {
+        font-size: calc(0.4em + 1vw);
+    }
+
+    .descripcion span {
+        font-size: calc(0.4em + 1vw);
+    }
 
     .main .box {
         flex-direction: row;

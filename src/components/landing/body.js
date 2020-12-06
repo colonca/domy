@@ -105,16 +105,16 @@ const Body = () => {
                     <div className="w-11/12 md:w-5/6 m-auto md:flex">
                         <div className='flex flex-col mb-2'>
                             <img src={deliverma_03} alt="" className='hidden md:block w-1/6 md:w-2/5 ml-8 -mt-40'/>
-                            <div className='flex justify-between items-end' style={ {color:'#002A8B', 'font-family': '\'Poppins\', sans-serif','border-bottom':'2px solid #002A8B'} }>
+                            <div className='flex justify-between items-end' style={ {color:'#002A8B', 'fontFamily': '\'Poppins\', sans-serif','borderBottom':'2px solid #002A8B'} }>
                                 <div className='md:w-2/4 mt-2'>
-                                    <div className='font-bold text-xl md:text-xl lg:text-2xl'>Quiero saber más acerca de Do-my</div>
-                                    <div className='font-semibold md:text-xl lg:text-2xl'>Escribenos <span>&#8594;</span></div>
+                                    <div className='font-bold text-xl md:text-xl lg:text-2xl py-4'>Quiero saber más acerca de Do-my</div>
+                                    <div className='font-semibold text-xl md:text-xl lg:text-2xl'>Escribenos <span>&#8594;</span></div>
                                 </div>
                                 <img src={camion} alt="" className='w-2/6'/>
                             </div>
                         </div>
-                        <div className="informacion">
-                            <p style={{color:'#002A8B','text-align':'left'}} className='mt-5 text-xl lg:text-2xl'>Empieza a ganar dinero con Do-my, descarga disponible en tu store favorita!</p>
+                        <div className="informacion" style={{'fontFamily':"Poppins, san-serif"}}>
+                            <p style={{color:'#002A8B','textAlign':'left'}} className='text-xl lg:text-2xl'>Empieza a ganar dinero con Do-my, descarga disponible en tu store favorita!</p>
                             <div className="stores">
                                 <a href="https://www.apple.com/co/ios/app-store/"><img src={appstore} alt="icon-appstore"/></a>
                                 <a href="https://play.google.com/store?hl=es_419"><img src={playstore} alt="play-store" /></a>

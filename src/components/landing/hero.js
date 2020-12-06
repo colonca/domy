@@ -1,6 +1,6 @@
 import logo from "../../assets/images/domy_logo_wh.svg";
-import '../../assets/css/hero.css';
 import women from '../../assets/images/header_woman.jpg';
+import '../../assets/css/hero.css';
 
 const Hero = () => {
     return (

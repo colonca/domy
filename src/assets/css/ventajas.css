@@ -105,6 +105,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
     z-index: 1;
 }
 
+.package {
+    display: flex;
+    justify-content: center;
+}
+
 .package img {
     width: 50%;
 }
@@ -132,20 +137,27 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 .title h3 {
     font-weight: bold;
-    font-size: calc(0.6em + 1vw);
+    font-size: calc(1.2em + 1vw);
     margin-bottom: 10px;
 }
 
 .title p {
-font-size: calc(0.4em + 1vw);
+    font-size: calc(0.8em + 1vw);
+    padding-bottom: 1em;
 }
-
-
 
 @media only screen
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (-webkit-min-device-pixel-ratio: 1) {
+
+    .title h3 {
+        font-size: calc(0.6em + 1vw);
+    }
+
+    .title p {
+        font-size: calc(0.4em + 1vw);
+    }
 
     .phone {
         display: block;
@@ -156,6 +168,13 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media screen
 and (min-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 1) {
+    .title h3 {
+        font-size: calc(0.6em + 1vw);
+    }
+
+    .title p {
+        font-size: calc(0.4em + 1vw);
+    }
 
     .ventajas-grid {
         margin-top: -30%;
@@ -196,6 +215,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 .informacion p {
+   font-family: 'Poppins',sans-serif;
    font-weight: bold;
    font-size: calc(0.8em + 1vw);
    text-align: center;
@@ -214,11 +234,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
 .stores {
     display: flex;
     justify-content: center;
-    margin-right: -20%;
 }
 
 .stores a {
     width: 30vw;
+}
+
+.stores a:first-child {
+    margin-right: 1em;
 }
 
 @media only screen
@@ -269,7 +292,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 /*cite with avatar*/
 .cite_with_avatar {
-    margin-top: -50px;
+    margin-top: 20px;
     background-color: #002A8B;
     color:white;
     display: flex;
@@ -285,23 +308,24 @@ and (-webkit-min-device-pixel-ratio: 1) {
 .location{
     display: block;
     position: absolute;
-    top: -10px;
+    top: -5px;
     left: 10px;
-    width: 40px;
+    width: 25px;
     z-index: 3;
 }
 
 .man {
     position: relative;
-    width: 30vw;
+    width: 40vw;
     z-index: 2;
 }
 
 .cite_with_avatar cite {
     color: #3ACFE3;
+    font-style: normal;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: calc(1em + 2vw);
+    font-size: calc(0.8em + 1vw);
 }
 
 
@@ -313,7 +337,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
         display: flex;
     }
     .cite_with_avatar cite {
-        width: 60%;
+        margin-left: 1em;
+        width: 80%;
     }
 
     .avatar {
@@ -334,6 +359,23 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 @media(min-width: 1025px){
 
+
+    .location{
+        width: 40px;
+    }
+
+    .man {
+        width: 30vw;
+    }
+
+    .cite_with_avatar cite {
+
+        font-size: calc(1em + 2vw);
+    }
+
+    .cite_with_avatar {
+        margin-top: -50px;
+    }
     .location{
         width: 40%;
         top: -25%;
@@ -351,6 +393,18 @@ and (-webkit-min-device-pixel-ratio: 1) {
     background-size:  100%,cover;
 }
 
+.domy-app {
+    padding-top: 2em;
+}
+
+.worker-col-1 h3 {
+    margin-top: 2em;
+}
+
+.worker-col-1 p {
+    margin-bottom: 1em;
+}
+
 @media (min-width: 1025px){
     .worker {
         background-color: white;
@@ -365,8 +419,18 @@ and (-webkit-min-device-pixel-ratio: 1) {
                 "col-1 phone col-2";
     }
 
+    .worker-col-1 h3 {
+        margin-top: 0;
+    }
+
+
+    .worker-col-1 p {
+        margin-bottom: 0;
+    }
+
     .domy-app {
         grid-area: phone;
+        padding-top: 0;
     }
 
     .worker-col-1{
@@ -384,12 +448,12 @@ and (-webkit-min-device-pixel-ratio: 1) {
     background-color: #3acfe3;
 }
 .frase {
-    padding-top: 20px;
+    padding: 1em 0;
     font-family: 'Poppins', sans-serif;
     color:white;
-    font-size: calc(1.5em + 1vw);
+    font-size: calc(1.2em + 1vw);
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 @media (min-width: 1025px){
@@ -400,6 +464,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
    .frase{
        color:#3acfe3;
        width: 50%;
+       text-align: center;
    }
 }
 
