@@ -58,3 +58,16 @@ and (-webkit-min-device-pixel-ratio: 1) {
         font-size: calc(0.4em + 1vw);
     }
 }
+
+.animate-physical {
+    animation: physical 1s ease-in-out infinite;
+}
+
+/*Animations */
+@keyframes physical {
+    0%   { transform:translateY(0); }
+    25%  {transform: translateY(-1px)}
+    50%  { transform: translateY(-2.5px)}
+    75%  {transform: translateY(-1px)}
+    100% { transform:translateY(0); }
+}

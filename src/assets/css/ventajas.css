@@ -398,6 +398,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 .worker-col-1 h3 {
+    font-size: calc(0.9em + 1vw);
     margin-top: 2em;
 }
 
@@ -420,6 +421,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
 
     .worker-col-1 h3 {
+        font-size: calc(0.8em + 1vw);
         margin-top: 0;
     }
 
@@ -476,7 +478,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 .footer-text {
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
     text-align: center;
 }
 

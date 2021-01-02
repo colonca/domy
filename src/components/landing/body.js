@@ -1,4 +1,7 @@
-import React from "react";
+import React,{useEffect} from "react";
+import gsap from 'gsap';
+import  ScrollTrigger from 'gsap/ScrollTrigger';
+//assets
 import body from "../../assets/images/body_01.png";
 import taxi_img from "../../assets/images/asset_taxi.png";
 import bicicleta from "../../assets/images/asset_bike.png";
@@ -22,15 +25,56 @@ import '../../assets/css/ventajas.css';
 import Item from '../landing/item';
 
 const Body = () => {
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('.arrive',{
+            x:-100,
+            y:-100,
+            opacity: 0,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: '.arrive',
+                start: 'top bottom',
+                end: 'bottom center',
+                toggleActions: 'play resume reverse reset'
+            }
+        });
+
+        gsap.from('.deliverma_moto',{
+            x: '-100vw',
+            opacity: 0.2,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: '.deliverma-moto',
+                start: 'center bottom',
+                toggleActions: 'play resume reverse reset'
+            }
+        });
+
+        gsap.from('.domy-app',{
+            opacity: 0,
+            scale: 0.9,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.domy-app',
+                start: 'top bottom',
+                end: 'bottom center',
+                toggleActions: 'play resume reverse reset'
+            }
+        });
+
+    },[]);
+
     return (
         <React.Fragment>
             <div className='ilustraciones'>
                 <img src={body} alt="body" className='background-ilustraciones'/>
-                <img src={taxi_img} alt="taxi-domy" className='taxi-domy'/>
-                <img src={bicicleta} alt="bicicleta-domy" className='bicicleta-domy'/>
-                <img src={vespa} alt="vespa-domy" className='vespa-domy'/>
+                <img src={taxi_img} alt="taxi-domy" className='taxi-domy arrive'/>
+                <img src={bicicleta} alt="bicicleta-domy" className='bicicleta-domy arrive'/>
+                <img src={vespa} alt="vespa-domy" className='vespa-domy arrive'/>
                 <img src={elipse} alt="elipse-domy" className='elipse-domy'/>
-                <img src={moto_img} alt="moto-domy" className='moto'/>
+                <img src={moto_img} alt="moto-domy" className='moto arrive'/>
             </div>
             <div className="ventajas">
                 <div className="box">
@@ -102,7 +146,7 @@ const Body = () => {
                             <Item titulo={'Todo el negocio está en tus manos.'} color={'#002a8b'} descripcion={'Posibilidad de realizar contraofertas a las solicitudes de los clientes.'}/>
                         </div>
                     </div>
-                    <div className="w-11/12 md:w-5/6 m-auto md:flex">
+                    <div className="m-auto md:flex justify-between">
                         <div className='flex flex-col mb-2'>
                             <img src={deliverma_03} alt="" className='hidden md:block w-1/6 md:w-2/5 ml-8 -mt-40'/>
                             <div className='flex justify-between items-end' style={ {color:'#002A8B', 'fontFamily': '\'Poppins\', sans-serif','borderBottom':'2px solid #002A8B'} }>
@@ -110,7 +154,7 @@ const Body = () => {
                                     <div className='font-bold text-xl md:text-xl lg:text-2xl py-4'>Quiero saber más acerca de Do-my</div>
                                     <div className='font-semibold text-xl md:text-xl lg:text-2xl'>Escribenos <span>&#8594;</span></div>
                                 </div>
-                                <img src={camion} alt="" className='w-2/6'/>
+                                <img src={camion} alt="" className='w-2/6 animate-physical'/>
                             </div>
                         </div>
                         <div className="informacion" style={{'fontFamily':"Poppins, san-serif"}}>
@@ -127,7 +171,7 @@ const Body = () => {
                     <div className='box frase'>"En Do-my, nos movemos hacia una nueva forma de hacer las cosas"</div>
             </div>
             <div className='footer'>
-                <img src={footer} alt="footer" className='hidden md:block'/>
+                <img src={footer} alt="footer" className='md:block'/>
                 <div className='md:flex justify-around items-center footer-descripcion'>
                     <div className='footer-text'>Todos los derechos reservados Do-my 2020</div>
                     <div className='footer-text'>Hecho con <span className='text-red-600'> &#10084;</span> en valledupar - Cesar</div>
@@ -136,5 +180,7 @@ const Body = () => {
         </React.Fragment>
     );
 }
+
+document.getElementById('');
 
 export default Body;

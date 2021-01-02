@@ -6,11 +6,14 @@ import Ilustraciones  from "../components/landing/ilustraciones";
 import Body from "../components/landing/body";
 
 const Landing = () =>{
-    return (<React.Fragment>
-        <Hero/>
-        <Ilustraciones/>
-        <Body/>
-    </React.Fragment>);
+
+    return (
+        <div>
+            <Hero/>
+            <Ilustraciones/>
+            <Body/>
+        </div>
+    );
 };
 
 export default Landing;
