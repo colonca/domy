@@ -9,13 +9,14 @@ import {
 
 //pages
 import Politicas from './pages/politicas';
+import TerminosYCondiciones from './pages/terminos_y_condiciones';
 
 const App = ()=>{
   return (
     <Router>
         <Switch>
             <Route path="/tyc">
-               <div>terminos y condiciones</div> 
+               <TerminosYCondiciones/>
             </Route>
             <Route path="/politicas">
               <Politicas/>

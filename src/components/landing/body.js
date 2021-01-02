@@ -1,4 +1,5 @@
 import React,{useEffect} from "react";
+import {Link} from 'react-router-dom';
 import gsap from 'gsap';
 import  ScrollTrigger from 'gsap/ScrollTrigger';
 //assets
@@ -173,7 +174,15 @@ const Body = () => {
             <div className='footer'>
                 <img src={footer} alt="footer" className='md:block'/>
                 <div className='md:flex justify-around items-center footer-descripcion'>
-                    <div className='footer-text'>Todos los derechos reservados Do-my 2020</div>
+                    <div className='footer-text'>
+                        <strong>Todos los derechos reservados Do-my 2020</strong>
+                        <Link className="ml-2 text-sm" to="/politicas">
+                            Política de Privacidad,
+                        </Link>
+                        <Link className="ml-2 text-sm" to="/tyc">
+                            Terminos y Condiciones,
+                        </Link>
+                    </div>
                     <div className='footer-text'>Hecho con <span className='text-red-600'> &#10084;</span> en valledupar - Cesar</div>
                 </div>
             </div>
